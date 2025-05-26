@@ -2,7 +2,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /app
 
-COPY *.sln .
+COPY *.sln ./
 COPY BikeRental.DDD.API/*.csproj ./BikeRental.DDD.API/
 COPY BikeRental.DDD.Application/*.csproj ./BikeRental.DDD.Application/
 COPY BikeRental.DDD.Domain/*.csproj ./BikeRental.DDD.Domain/
@@ -30,7 +30,6 @@ RUN apt-get update && \
 RUN apt-get update && apt-get install -y curl && \
     curl -sSL https://github.com/jwilder/dockerize/releases/download/v0.6.1/dockerize-linux-amd64-v0.6.1.tar.gz | tar -xzv -C /usr/local/bin
 
-COPY . .
 
 ENV ASPNETCORE_ENVIRONMENT=Development
 ENV ASPNETCORE_URLS=http://+:5000;https://+:5001
