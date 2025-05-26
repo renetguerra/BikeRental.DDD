@@ -7,11 +7,18 @@ COPY BikeRental.DDD.API/*.csproj ./BikeRental.DDD.API/
 COPY BikeRental.DDD.Application/*.csproj ./BikeRental.DDD.Application/
 COPY BikeRental.DDD.Domain/*.csproj ./BikeRental.DDD.Domain/
 COPY BikeRental.DDD.Infrastructure/*.csproj ./BikeRental.DDD.Infrastructure/
+COPY BikeRental.Tests/*.csproj ./BikeRental.Tests/
 RUN dotnet restore
 
-COPY . .
-WORKDIR /src/BikeRental.DDD.API
-RUN dotnet publish -c Release -o out
+# COPY . .
+COPY BikeRental.DDD.API/. ./BikeRental.DDD.API/
+COPY BikeRental.DDD.Application/. ./BikeRental.DDD.Application/
+COPY BikeRental.DDD.Domain/. ./BikeRental.DDD.Domain/
+COPY BikeRental.DDD.Infrastructure/. ./BikeRental.DDD.Infrastructure/
+COPY BikeRental.Tests/. ./BikeRental.Tests/
+
+WORKDIR /app/BikeRental.DDD.API
+RUN dotnet publish -c Release -o /app/out
 
 # Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:9.0
