@@ -5,8 +5,8 @@ services:
     image: bikerental-api
     container_name: bikerental-api-container
     build:
-      context: ./BikeRental.DDD.API
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: BikeRental.DDD/BikeRental.DDD.API/Dockerfile
     ports:      
       - "5000:5000"
       - "5001:5001"
