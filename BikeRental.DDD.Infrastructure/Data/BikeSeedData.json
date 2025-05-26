@@ -1,0 +1,182 @@
+[
+  {
+    "Brand": "Trek",
+    "Model": "Domane SL 6",
+    "Type": "Road",
+    "Year": 2023,
+    "IsAvailable": true,
+    "Price": 15.00,    
+    "BikePhotos": [
+      {
+        "Url": "https://vansprint.de/media/08/ae/4f/1725461644/Trek-Domane-SL-6-Gen-4-2025-Rennrad-Carbon-Blau.webp?ts=1725463147",
+        "IsMain": true
+      },
+      {
+        "Url": "https://vansprint.de/thumbnail/62/d4/ea/1709745506/Trek-Domane-AL-4-Gen-4-Rennrad-2024-1_400x400.webp?ts=1709826423",
+        "IsMain": false
+      }
+    ]
+  },
+  {
+    "Brand": "Specialized",
+    "Model": "Tarmac SL7",
+    "Type": "Road",
+    "Year": 2022,
+    "IsAvailable": true,
+    "Price": 10.00,
+    "BikePhotos": [
+      {
+        "Url": "https://vansprint.de/thumbnail/c6/96/d1/1745252206/Specialized-Tarmac-SL7-Comp-2025-Aero-Rennrad-Carbon-Gruen_400x400.webp?ts=1745257437",
+        "IsMain": true
+      },
+      {
+        "Url": "https://vansprint.de/thumbnail/63/d6/45/1745252206/Specialized-Tarmac-SL7-Sport-2025-Aero-Rennrad-Carbon-Schwarz_400x400.webp?ts=1745257470",
+        "IsMain": false
+      }
+    ]
+  },
+  {
+    "Brand": "Giant",
+    "Model": "Defy Advanced 1",
+    "Type": "Road",
+    "Year": 2021,
+    "IsAvailable": true,
+    "Price": 25.00,
+    "BikePhotos": [
+      {
+        "Url": "https://vansprint.de/media/aa/b2/f4/1723540180/Ghost-Lector-Advanced-2025-Mountainbike-29-Zoll-Carbon.webp?ts=1723540758",
+        "IsMain": true
+      },
+      {
+        "Url": "https://vansprint.de/thumbnail/4b/ac/f0/1700209459/Ghost-Lector-FS-SF-Advanced-MTB-Fully-Carbon-1_400x400.webp?ts=1706273792",
+        "IsMain": false
+      }
+    ]
+  },
+  {
+    "Brand": "Cannondale",
+    "Model": "Synapse Carbon",
+    "Type": "Endurance",
+    "Year": 2020,
+    "IsAvailable": true,
+    "Price": 15.00,
+    "BikePhotos": [
+      {
+        "Url": "https://vansprint.de/media/da/08/58/1730994480/Cannondale-Synapse-Neo-E-Gravel-Bike-Carbon.webp?ts=1730995159",
+        "IsMain": true
+      },
+      {
+        "Url": "https://vansprint.de/media/f7/e0/01/1730994480/Cannondale-Synapse-Neo-Allroad-1-E-Gravel-Bike-Bosch-SX-Carbon.webp?ts=1730995129",
+        "IsMain": false
+      }
+    ]
+  },
+  {
+    "Brand": "Scott",
+    "Model": "Addict RC 15",
+    "Type": "Race",
+    "Year": 2022,
+    "IsAvailable": true,
+    "Price": 50.00,
+    "BikePhotos": [
+      {
+        "Url": "https://vansprint.de/media/9b/43/76/1734428729/Orbea-Vector-15-EQ-2025-Urban-Bike-Gruen.webp?ts=1734430817",
+        "IsMain": true
+      },
+      {
+        "Url": "https://vansprint.de/thumbnail/83/87/d2/1745252127/Specialized-Stumpjumper-15-Comp-Alloy-2025-MTB-Trail-Bike-Fully-Schwarz_400x400.webp?ts=1745255225",
+        "IsMain": false
+      }
+    ]
+  },
+  {
+    "Brand": "BMC",
+    "Model": "Teammachine SLR01",
+    "Type": "Race",
+    "Year": 2023,
+    "IsAvailable": true,
+    "Price": 30.00,
+    "BikePhotos": [
+      {
+        "Url": "https://vansprint.de/media/68/52/a3/1725461729/Trek-Session-9-X01-2025-E-MTB-Fully-Downhill.webp?ts=1725463255",
+        "IsMain": true
+      },
+      {
+        "Url": "https://vansprint.de/thumbnail/61/ba/05/1709745501/Trek-Domane%20-SLR-7-AXS-Gravel-E-Bike-Carbon-2024-Rot-1_400x400.webp?ts=1709826385",
+        "IsMain": false
+      }
+    ]
+  },
+  {
+    "Brand": "Canyon",
+    "Model": "Ultimate CF SLX",
+    "Type": "Road",
+    "Year": 2022,
+    "IsAvailable": true,
+    "Price": 5.00,
+    "BikePhotos": [
+      {
+        "Url": "https://vansprint.de/thumbnail/ed/a6/c5/1725616344/Trek-Slash-plus-9.7-SLX-XT-2025-E-MTB-Fully-Carbon-29-Zoll-Gruen_400x400.webp?ts=1725616345",
+        "IsMain": true
+      },
+      {
+        "Url": "https://vansprint.de/media/62/c7/bf/1723540306/Lapierre-Spicy-CF-Team-2024-MTB-Fully-Carbon.webp?ts=1723541446",
+        "IsMain": false
+      }
+    ]
+  },
+  {
+    "Brand": "Orbea",
+    "Model": "Orca M30",
+    "Type": "Road",
+    "Year": 2021,
+    "IsAvailable": true,
+    "Price": 25.00,
+    "BikePhotos": [
+      {
+        "Url": "https://vansprint.de/media/e8/b7/94/1727257032/Orbea-Orca-M30-2025-Rennrad-Carbon-Schwarz.webp?ts=1727258063",
+        "IsMain": true
+      },
+      {
+        "Url": "https://vansprint.de/media/a8/c0/56/1727257032/Orbea-Orca-M30iLTD-PWR-2025-Rennrad-Carbon-Powermeter-Orange.webp?ts=1727258127",
+        "IsMain": false
+      }
+    ]
+  },
+  {
+    "Brand": "Merida",
+    "Model": "Reacto 6000",
+    "Type": "Aero",
+    "Year": 2020,
+    "IsAvailable": true,
+    "Price": 40.00,
+    "BikePhotos": [
+      {
+        "Url": "https://vansprint.de/media/10/72/d2/1734428729/Orbea-Vector-35-2025-Urban-Bike-Gruen.webp?ts=1734430780",
+        "IsMain": true
+      },
+      {
+        "Url": "https://vansprint.de/thumbnail/1c/fa/0a/1646737047/HNF-Nicolai-XD3-All-terrain-E-Mtb-Hardtail-Riemenantrieb-Schwarz-Fahrrad_400x400.webp?ts=1669723192",
+        "IsMain": false
+      }
+    ]
+  },
+  {
+    "Brand": "Pinarello",
+    "Model": "Dogma F12",
+    "Type": "Race",
+    "Year": 2023,
+    "IsAvailable": true,
+    "Price": 30.00,
+    "BikePhotos": [
+      {
+        "Url": "https://vansprint.de/thumbnail/89/b2/d5/1741773553/Hercules-Futura-HD-I-12-E-Bike-Damen-Trekking-Tiefeinsteiger_400x400.webp?ts=1741778166",
+        "IsMain": true
+      },
+      {
+        "Url": "https://vansprint.de/thumbnail/ee/d3/a5/1741773553/Hercules-Intero-Pro-I-12-E-Bike-Damen-Trekking-Tiefeinsteiger-28-Zoll_400x400.webp?ts=1741778452",
+        "IsMain": false
+      }
+    ]
+  }
+]

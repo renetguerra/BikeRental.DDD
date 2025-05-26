@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  app:
+    image: bikerental-api
+    container_name: bikerental-api-container
+    build:
+      context: ./API
+      dockerfile: Dockerfile
+    ports:      
+      - "5000:5000"
+      - "5001:5001"
+    volumes:
+      - ./ssl:/app/ssl     
+    environment:
+      - ASPNETCORE_URLS=http://+:5000;https://+:5001
+      - CONNECTIONSTRINGS__DEFAULTCONNECTION=Server=db;Database=BikeRental;User Id=sa;Password=Adm1nP@ssw0rd!;TrustServerCertificate=True      
+      - ASPNETCORE_Kestrel__EndPoints__Https__Certificate__PathPFX=/app/ssl/cert.pfx
+      - ASPNETCORE_Kestrel__EndPoints__Https__Certificate__Password=authorizationSSL
+    depends_on:
+      - db
+    networks:
+      - bikerental-network
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: bikerental-client
+    ports:
+      - "4200:80"
+    networks:
+      - bikerental-network
+    depends_on:
+      - app
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: bikerental-db
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Adm1nP@ssw0rd!
+    ports:
+      - "11433:1433"
+    volumes:
+      - bikerental-db-data:/var/opt/mssql
+    networks:
+      - bikerental-network
+
+volumes:
+  bikerental-db-data:
+    driver: local
+
+networks:
+  bikerental-network:
+    driver: bridge

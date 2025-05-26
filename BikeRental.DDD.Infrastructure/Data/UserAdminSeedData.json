@@ -1,0 +1,77 @@
+[
+  {
+    "Name": "Rose",
+    "Surname": "Hoover",
+    "Gender": "female",
+    "KnownAs": "Rose",
+    "Introduction": "Dolore eu exercitation exercitation pariatur do. Labore velit cupidatat deserunt ut occaecat. Et fugiat id laborum sint cillum. Officia est eu cillum qui est tempor labore sit id irure nisi est elit. Exercitation magna eu voluptate velit. Quis ullamco occaecat cupidatat ipsum amet quis ad velit duis reprehenderit proident quis incididunt ea. Officia laboris reprehenderit ex magna fugiat est pariatur sunt laborum occaecat aute deserunt anim.\r\n",
+    "DateOfBirth": "1988-05-08",
+    "Created": "2020-03-31",
+    "LastActive": "2020-05-04",
+    "Email": "rosehoover@gynk.com",
+    "PhoneNumber": "+1 (914) 441-3061",
+    "Address": {
+      "Street": "Berliner Allee",
+      "HouseNumber": "45B",
+      "Zip": "10117",
+      "City": "Berlin",
+      "Country": "Germany"
+    },
+    "UserPhotos": [
+      {
+        "Url": "https://randomuser.me/api/portraits/women/73.jpg",
+        "IsMain": true
+      }
+    ]
+  },
+  {
+    "Name": "Claire",
+    "Surname": "England",
+    "Gender": "female",
+    "KnownAs": "Claire",
+    "Introduction": "Tempor cupidatat exercitation duis nostrud et magna amet cupidatat. Esse ipsum tempor sit mollit ullamco exercitation dolore magna veniam exercitation velit. Labore pariatur qui ex pariatur quis enim in laboris elit cupidatat occaecat.\r\n",
+    "DateOfBirth": "1997-08-17",
+    "Created": "2019-10-11",
+    "LastActive": "2020-05-23",
+    "Email": "claireengland@gynk.com",
+    "PhoneNumber": "+1 (927) 430-3476",
+    "Address": {
+      "Street": "Berliner Allee",
+      "HouseNumber": "45B",
+      "Zip": "10117",
+      "City": "Berlin",
+      "Country": "Germany"
+    },
+    "UserPhotos": [
+      {
+        "Url": "https://randomuser.me/api/portraits/women/69.jpg",
+        "IsMain": true
+      }
+    ]
+  },
+  {
+    "Name": "Joseph",
+    "Surname": "Anderson",
+    "Gender": "male",
+    "KnownAs": "Joseph",
+    "Introduction": "Ad sunt ea aliqua do non Lorem veniam. Est do nostrud irure duis magna dolore elit incididunt laboris. Eu ea ullamco laborum tempor cillum consectetur nostrud.\r\n",
+    "DateOfBirth": "1971-07-27",
+    "Created": "2020-05-29",
+    "LastActive": "2020-06-03",
+    "Email": "josephanderson@gynk.com",
+    "PhoneNumber": "+1 (848) 462-3127",
+    "Address": {
+      "Street": "Berliner Allee",
+      "HouseNumber": "45B",
+      "Zip": "10117",
+      "City": "Berlin",
+      "Country": "Germany"
+    },
+    "UserPhotos": [
+      {
+        "Url": "https://randomuser.me/api/portraits/men/76.jpg",
+        "IsMain": true
+      }
+    ]
+  }
+]
