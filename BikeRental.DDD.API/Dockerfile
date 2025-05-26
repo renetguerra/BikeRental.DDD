@@ -44,4 +44,4 @@ EXPOSE 5000
 EXPOSE 5001
 EXPOSE 80
 
-CMD ["dockerize", "-wait", "tcp://bikerental-db:1433", "-timeout", "300s", "dotnet", "BikeRental.DDD.API.dll"]
+CMD ["dockerize", "-wait", "tcp://db:1433", "-timeout", "300s", "dotnet", "BikeRental.DDD.API.dll"]
