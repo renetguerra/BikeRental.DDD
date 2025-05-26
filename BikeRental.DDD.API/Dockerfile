@@ -2,10 +2,15 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /app
 
-COPY *.csproj ./
+COPY *.sln .
+COPY BikeRental.DDD.API/*.csproj ./BikeRental.DDD.API/
+COPY BikeRental.DDD.Application/*.csproj ./BikeRental.DDD.Application/
+COPY BikeRental.DDD.Domain/*.csproj ./BikeRental.DDD.Domain/
+COPY BikeRental.DDD.Infrastructure/*.csproj ./BikeRental.DDD.Infrastructure/
 RUN dotnet restore
 
-COPY . ./
+COPY . .
+WORKDIR /src/BikeRental.DDD.API
 RUN dotnet publish -c Release -o out
 
 # Runtime
@@ -33,4 +38,4 @@ EXPOSE 5000
 EXPOSE 5001
 EXPOSE 80
 
-CMD ["dockerize", "-wait", "tcp://bikerental-db:1433", "-timeout", "300s", "dotnet", "API.dll"]
+CMD ["dockerize", "-wait", "tcp://bikerental-db:1433", "-timeout", "300s", "dotnet", "BikeRental.DDD.API.dll"]
