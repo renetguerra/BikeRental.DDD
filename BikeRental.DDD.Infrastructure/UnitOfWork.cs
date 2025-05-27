@@ -16,24 +16,33 @@ namespace BikeRental.DDD.Infrastructure
     public class UnitOfWork : IUnitOfWork
     {
         private readonly DataContext _context;
-        private readonly IMapper _mapper;
-        public UnitOfWork(DataContext context, IMapper mapper)
+        public UnitOfWork(DataContext context,
+            IUserRepository userRepository, 
+            IBikeRepository bikeRepository, 
+            IPhotoRepository photoRepository, 
+            IRentalRepository rentalRepository, 
+            ILikesRepository likesRepository, 
+            IConnectionRepository connectionRepository)
         {
             _context = context;
-            _mapper = mapper;
+            UserRepository = userRepository;
+            BikeRepository = bikeRepository;
+            PhotoRepository = photoRepository;
+            RentalRepository = rentalRepository;
+            LikesRepository = likesRepository;
+            ConnectionRepository = connectionRepository;            
         }
 
         // Repositories
-        public IUserRepository UserRepository => new UserRepository(_context, _mapper);
+        public IUserRepository UserRepository { get; }
 
-        public IBikeRepository BikeRepository => new BikeRepository(_context, _mapper);
+        public IBikeRepository BikeRepository { get; }
 
-        public IPhotoRepository PhotoRepository => new PhotoRepository(_context, _mapper);
-        public IRentalRepository RentalRepository => new RentalRepository(_context, _mapper);
+        public IPhotoRepository PhotoRepository { get; }
+        public IRentalRepository RentalRepository { get; }
 
-        public ILikesRepository LikesRepository => new LikesRepository(_context, _mapper);
-        public IConnectionRepository ConnectionRepository => new ConnectionRepository(_context, _mapper);
-        public IMessageRepository MessageRepository => new MessageRepository(_context, _mapper);
+        public ILikesRepository LikesRepository { get; }
+        public IConnectionRepository ConnectionRepository { get; }
 
 
         public void Add<T>(T entity) where T : class

@@ -25,10 +25,7 @@ namespace BikeRental.DDD.Domain.Entities
 
         public virtual List<UserPhoto> UserPhotos { get; set; } = new();
 
-        public virtual List<Like> LikedBikes { get; set; } = new();
-
-        public virtual List<Message> MessagesSent { get; set; }
-        public virtual List<Message> MessagesReceived { get; set; }
+        public virtual List<Like> LikedBikes { get; set; } = new();        
 
         public virtual List<UserRole> UserRoles { get; set; }
 

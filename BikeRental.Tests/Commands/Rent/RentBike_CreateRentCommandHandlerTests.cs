@@ -42,7 +42,7 @@ namespace BikeRental.Tests.Commands.Rent
                     .ReturnsAsync(new Bike { Id = 1, IsAvailable = true });
 
             _mockUow.Setup(x => x.UserRepository.GetUserByIdAsync(1))
-                    .ReturnsAsync(new User { Id = 1 });
+                    .ReturnsAsync(new User { Id = 1, UserName = "shana", Surname = "XXXX", Name = "Shana", KnownAs = "shana", Gender = "Female" });
 
             _mockUow.Setup(x => x.RentalRepository.GetActiveRental(1, 1))
                     .ReturnsAsync((Rental)null);

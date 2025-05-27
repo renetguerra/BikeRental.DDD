@@ -19,8 +19,7 @@ namespace BikeRental.DDD.Application.Commands.Bike
     public class CreateBike
     {        
         public record CreateBikeCommand(BikeRental.DDD.Domain.Entities.Bike Bike) : IRequest<IResult>;
-
-        // Handler
+        
         public class CreateBikeHandler : IRequestHandler<CreateBikeCommand, IResult>
         {            
             private readonly IValidator<BikeRental.DDD.Domain.Entities.Bike> _validator;

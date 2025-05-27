@@ -5,7 +5,7 @@ services:
     image: bikerental-api
     container_name: bikerental-api-container
     build:
-      context: ./API
+      context: ./BikeRental.DDD/BikeRental.DDD.API
       dockerfile: Dockerfile
     ports:      
       - "5000:5000"
@@ -41,7 +41,7 @@ services:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=Adm1nP@ssw0rd!
     ports:
-      - "11433:1433"
+      - "11434:1433"
     volumes:
       - bikerental-db-data:/var/opt/mssql
     networks:

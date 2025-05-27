@@ -37,28 +37,16 @@ app.UseAuthorization();
 
 app.MapControllers();
 app.MapHub<PresenceHub>("hubs/presence");
-app.MapHub<MessageHub>("hubs/message");
 app.MapFallbackToController("Index", "Fallback");
 
-app.MapWhen(ctx => !ctx.Request.Path.StartsWithSegments("/api"), appBuilder =>
-{
-    appBuilder.UseDefaultFiles();
-    appBuilder.UseStaticFiles();
-    appBuilder.UseRouting();
-    appBuilder.UseEndpoints(endpoints =>
-    {
-        endpoints.MapFallbackToFile("index.html");
-    });
-});
+//// Configure the HTTP request pipeline.
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;

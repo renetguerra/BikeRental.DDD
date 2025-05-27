@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using BikeRental.DDD.Domain;
 using BikeRental.DDD.Domain.Entities;
 

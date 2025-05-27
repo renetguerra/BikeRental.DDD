@@ -35,8 +35,7 @@ namespace BikeRental.DDD.Infrastructure
         public DbSet<Bike> Bikes { get; set; }        
         public DbSet<BikePhoto> BikePhotos { get; set; }
         public DbSet<UserPhoto> UserPhotos { get; set; }
-        public DbSet<Like> Likes { get; set; }        
-        public DbSet<Message> Messages { get; set; }        
+        public DbSet<Like> Likes { get; set; }                      
         public DbSet<Rental> Rentals { get; set; }        
 
         public DbSet<Group> Groups { get; set; }
@@ -67,8 +66,7 @@ namespace BikeRental.DDD.Infrastructure
             }
             catch (Exception ex)
             {
-                ex.Message.ToString();
-                return -1;
+                throw;                
             }
             
         }
@@ -161,17 +159,7 @@ namespace BikeRental.DDD.Infrastructure
                 .HasOne(l => l.Bike)
                 .WithMany(b => b.LikedByUsers)
                 .HasForeignKey(l => l.BikeId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            builder.Entity<Message>()
-                .HasOne(u => u.Recipient)
-                .WithMany(m => m.MessagesReceived)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            builder.Entity<Message>()
-                .HasOne(u => u.Sender)
-                .WithMany(m => m.MessagesSent)
-                .OnDelete(DeleteBehavior.Restrict);            
+                .OnDelete(DeleteBehavior.Cascade);                       
         }
     }
 }

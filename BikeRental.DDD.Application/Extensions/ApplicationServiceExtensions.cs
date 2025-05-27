@@ -52,8 +52,7 @@ namespace BikeRental.DDD.Application.Extensions
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IBikeRepository, BikeRepository>();
             services.AddScoped<ILikesRepository, LikesRepository>();
-            services.AddScoped<IConnectionRepository, ConnectionRepository>();
-            services.AddScoped<IMessageRepository, MessageRepository>();
+            services.AddScoped<IConnectionRepository, ConnectionRepository>();            
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IPhotoRepository, PhotoRepository>();
             services.AddScoped<IRentalRepository, RentalRepository>();

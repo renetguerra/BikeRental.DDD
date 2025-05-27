@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using BikeRental.DDD.Domain.DTOs.Bike;
 using BikeRental.DDD.Domain.DTOs.Common;
 using BikeRental.DDD.Domain.DTOs.Like;
-using BikeRental.DDD.Domain.DTOs.Message;
 using BikeRental.DDD.Domain.DTOs.Photo;
 using BikeRental.DDD.Domain.DTOs.Rental;
 using BikeRental.DDD.Domain.DTOs.User;
@@ -47,14 +41,7 @@ namespace BikeRental.DDD.Application.Helpers
             CreateMap<PhotoDTO, BikePhoto>();
 
             CreateMap<CustomerUpdateDTO, User>();
-            CreateMap<RegisterDTO, User>();
-                //.ForMember(dest => dest.Id, opt => opt.Ignore());
-
-            CreateMap<Message, MessageDTO>()
-                .ForMember(a => a.SenderPhotoUrl, opt => opt
-                    .MapFrom(u => u.Sender.UserPhotos.FirstOrDefault(p => p.IsMain).Url))
-                .ForMember(a => a.RecipientPhotoUrl, opt => opt
-                    .MapFrom(u => u.Recipient.UserPhotos.FirstOrDefault(p => p.IsMain).Url));            
+            CreateMap<RegisterDTO, User>();                                 
 
             CreateMap<User, UserDTO>();
             CreateMap<UserDTO, User>();

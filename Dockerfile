@@ -34,13 +34,9 @@ RUN apt-get update && \
     ACCEPT_EULA=Y apt-get install -y mssql-tools unixodbc-dev
 
 # Install dockerize
-# RUN apt-get update && apt-get install -y curl && \
-#     curl -sSL https://github.com/jwilder/dockerize/releases/download/v0.6.1/dockerize-linux-amd64-v0.6.1.tar.gz | tar -xzv -C /usr/local/bin
+RUN apt-get update && apt-get install -y curl && \
+    curl -sSL https://github.com/jwilder/dockerize/releases/download/v0.6.1/dockerize-linux-amd64-v0.6.1.tar.gz | tar -xzv -C /usr/local/bin
 
-COPY BikeRental.DDD.Infrastructure/Data/UserSeedData.json ./BikeRental.DDD.Infrastructure/Data/
-COPY ssl ./ssl
-COPY wait-for-it.sh ./wait-for-it.sh
-RUN chmod +x ./wait-for-it.sh
 
 ENV ASPNETCORE_ENVIRONMENT=Development
 ENV ASPNETCORE_URLS=http://+:5000;https://+:5001
@@ -48,5 +44,4 @@ EXPOSE 5000
 EXPOSE 5001
 EXPOSE 80
 
-# CMD ["dockerize", "-wait", "tcp://db:1433", "-timeout", "300s", "dotnet", "BikeRental.DDD.API.dll"]
-CMD ["-wait", "tcp://db:1433", "-timeout", "300s", "dotnet", "BikeRental.DDD.API.dll"]
+CMD ["dockerize", "-wait", "tcp://bikerental-db:1433", "-timeout", "300s", "dotnet", "BikeRental.DDD.API.dll"]

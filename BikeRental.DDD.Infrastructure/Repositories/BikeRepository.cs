@@ -61,7 +61,7 @@ namespace BikeRental.DDD.Infrastructure.Repositories
         }
 
         public async Task<BikeDTO?> GetBikeAsync(int id)
-        {
+        {            
             var query = context.Bikes
                 .Include(x => x.BikePhotos)
             .Where(x => x.Id == id)
