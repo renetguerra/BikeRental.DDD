@@ -94,7 +94,7 @@ namespace BikeRental.DDD.API.Controllers
         /// <param name="username">Username del usuario</param>
         /// <returns></returns>
         [HttpGet("{username}")]
-        public IActionResult GetUserByUsername(string username)
+        public async Task<IActionResult> GetUserByUsername(string username)
         {
             var currentUsername = User.GetUsername();
             var response = await _mediator.Send(new GetUserByUsernameQuery(username, currentUsername == username));        
